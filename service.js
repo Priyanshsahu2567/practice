@@ -13,4 +13,4 @@ console.log('connected')
 
 app.use('/auth',require('./user_routes'));
 
-app.listen(PORT,console.log('running'));
+app.listen();
