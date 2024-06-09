@@ -7,10 +7,10 @@ const mongoose =require('mongoose');
 
 
 const url = process.env.MONGO_URI
-const PORT = process.env.PORT;
+
 mongoose.connect(url)
 console.log('connected')
 
 app.use('/auth',require('./user_routes'));
 
-app.listen(PORT);
+app.listen(process.env.PORT || 5000,console.log('running'));
